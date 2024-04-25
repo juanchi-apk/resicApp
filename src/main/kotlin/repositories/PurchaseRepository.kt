@@ -17,10 +17,12 @@ object PurchaseRepository {
         purchases.add(Purchase(8L, 2802L, 2L, 500.00, "2023/01/01"))
         purchases.add(Purchase(9L, 1510L, 6L, 350.50, "2023/01/01"))
         purchases.add(Purchase(10L, 1510L, 5L, 150.00, "2023/01/01"))
+        purchases.add(Purchase(11L, 1515L, 1L, 100.00, "2024/01/01"))
     }
 
     fun add(purchase: Purchase) = purchases.add(purchase)
 
-    fun get(): List<Purchase> = purchases.toList()
+    fun getAllPurchases(): List<Purchase> = purchases.toList()
+
 
 }

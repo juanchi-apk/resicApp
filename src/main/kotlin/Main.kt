@@ -1,6 +1,8 @@
-import java.awt.Menu
+import managers.PurchaseManager
 
 fun main(args: Array<String>) {
+
+    val purchaseManager = PurchaseManager()
 
     val userLogged = launchLogin()
 
@@ -17,11 +19,12 @@ fun main(args: Array<String>) {
 
         when(optionSelected){
 //            1 -> goToShoppingMenu()
-//            2 -> showOrderPurchasesList()
-//            3 -> showCart()
+//            2 -> showCart()
+            3 -> purchaseManager.showOrderPurchasesList(userLogged)
             4 -> break
         }
 
     } while (true)
 }
+
 

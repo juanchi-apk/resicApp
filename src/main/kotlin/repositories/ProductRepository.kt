@@ -162,12 +162,5 @@ object ProductRepository {
 
     fun get(): List<Product> = products.toList()
 
-    fun getById(id: Long): Product {
-        products.forEach { product ->
-            if (product.id == id) return product
-        }
-//        APLICAR EXCEPTION //TODO Implementar solucion para obtener el paquete turistico solicitado
-        return products[0]
-    }
-
+    fun getProductById(id: Long) = products.find { it.id == id }
 }
